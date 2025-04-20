@@ -1,0 +1,70 @@
+alias config="git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
+
+
+everything done. just need to commit and push, set remote origin
+
+https://mjones44.medium.com/storing-dotfiles-in-a-git-repository-53f765c0005d
+
+Everyone has seen those dotfiles repositories on GitHub. There's lots of different ways to manage them, but the method I use now requires no extra tooling (other than git and a command line shell of your choice), no symbolic links to get files into the right locations, can be triggered from any directory on disk, and is easy to replicate on a new system.
+
+Basically what we’re going to do is set up a git repository at ~/.cfg or ~/.dotfiles or any directory within your home directory of your choosing (although you probably don't want to use ~/.config since that is the default value of $XDG_CONFIG_HOME), and a shell alias to help manage and control it.
+Creating the Repo
+
+If you’re setting this up the first time, there’s a few steps you’ll need to take to set up. First, create the repository:
+
+git init --bare $HOME/.dotfiles
+
+This creates a “bare” git repository at ~/.dotfiles. Now we'll set up an alias to interact with it from any directory on disk. Add the following alias to your ~/.bashrc or ~/.zshrc or ~/.config/fish/config.fish file, then source the file:
+
+# make sure the --git-dir is the same as the
+# directory where you created the repo above.
+alias config="git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
+
+The --work-tree=$HOME option sets the directory that the repository tracks to your home directory. Now, since there's probably more files in your home directory that you don't want in the repo than files you do want in the repo, you should configure the repo to not show untracked files by default. We can do that by setting a repository-local configuration option.
+
+config config --local status.showUntrackedFiles no
+
+Tracking Files
+
+To track files in our new ~/.dotfiles repo, we just need to add them. From any directory on disk, you can run the following command to add your ~/.bashrc or ~/.zshrc or ~/.config/fish/config.fish file to your new dotfiles repo:
+
+config add ~/.bashrc
+config add ~/.zshrc
+config add ~/.config/fish/config.fishconfig commit -m "Add .bashrc/.zshrc/config.fish file"
+config push
+
+Installing on a New System
+
+Of course, the main point of doing this is to easily sync your config across new machines. We can easily do this with a small bash script to initialize the system’s dotfiles from your git repository.
+
+#!/usr/bin/env bashgit clone --bare git@github.com:mrjones2014/dotfiles.git $HOME/.dotfiles# define config alias locally since the dotfiles
+# aren't installed on the system yet
+function config {
+   git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME $@
+}# create a directory to backup existing dotfiles to
+mkdir -p .dotfiles-backup
+config checkout
+if [ $? = 0 ]; then
+  echo "Checked out dotfiles from git@github.com:mrjones2014/dotfiles.git";
+  else
+    echo "Moving existing dotfiles to ~/.dotfiles-backup";
+    config checkout 2>&1 | egrep "\s+\." | awk {'print $1'} | xargs -I{} mv {} .dotfiles-backup/{}
+fi# checkout dotfiles from repo
+config checkout
+config config status.showUntrackedFiles no
+
+Now, installing your dotfiles on a new system is as simple as running:
+
+curl https://raw.githubusercontent.com/mrjones2014/dotfiles/master/scripts/config-init | bash
+
+That’s Really It
+
+That’s really all there is to it. Now you can easily add and track changes to dotfiles via your new config shell alias.
+
+config add ~/.config/something/somefile
+config commit -m "add somefile"
+config push
+
+Comment below with your dotfiles repo links! Feel free to browse mine for inspiration.
+
+mrjones2014/dotfiles

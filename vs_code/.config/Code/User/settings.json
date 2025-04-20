@@ -1,0 +1,145 @@
+// .config/Code/User/settings.json
+{
+    "[html][css]": {
+        "editor.autoIndent": "advanced",
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": false,
+        "editor.rulers": [80],
+        "editor.tabSize": 2
+    },
+    "[javascript]": {
+        "editor.autoIndent": "advanced",
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.rulers": [80],
+        "editor.tabSize": 4,
+        "editor.wordBasedSuggestions": "off"
+    },
+    "[javascriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.rulers": [80],
+        "editor.tabSize": 4
+    },
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[markdown]": {
+        "editor.defaultFormatter": "yzhang.markdown-all-in-one",
+        "editor.rulers": [100],
+        "editor.tabSize": 2
+    },
+    "[python]": {
+        "editor.autoIndent": "advanced",
+        "editor.defaultFormatter": "ms-python.black-formatter",
+        "editor.rulers": [80],
+        "editor.tabSize": 4,
+        "editor.wordBasedSuggestions": "off"
+    },
+    "[shellscript]": {
+        "editor.autoIndent": "advanced",
+        "editor.detectIndentation": false,
+        "editor.rulers": [80],
+        "editor.wordBasedSuggestions": "off"
+    },
+    //-------- Code Spell Checker Configuration --------
+    // Specify file types to spell check.
+    "cSpell.enabledFileTypes": {
+        "javascript": true,
+        "javascriptreact": true,
+        "markdown": true,
+        "plaintext": true,
+        "sql": true,
+        "typescript": true,
+        "typescriptreact": true,
+        "yaml": true
+    },
+    "cSpell.ignorePaths": [
+        "node_modules",
+        "**/node_modules",
+        "**/node_modules/**",
+        ".git"
+    ],
+    "cSpell.userWords": ["webdev"],
+    "editor.acceptSuggestionOnEnter": "off",
+    "editor.detectIndentation": true,
+    "editor.fontFamily": "JetBrainsMono Nerd Font Mono",
+    "editor.fontSize": 14,
+    "editor.fontWeight": "200",
+    "editor.formatOnPaste": false,
+    "editor.formatOnSave": true,
+    "editor.formatOnType": false,
+    "editor.guides.bracketPairs": false,
+    "editor.guides.highlightActiveBracketPair": false,
+    "editor.guides.highlightActiveIndentation": true,
+    "editor.guides.indentation": true,
+    "editor.insertSpaces": true,
+    "editor.lineNumbers": "relative",
+    "editor.minimap.enabled": false,
+    "editor.rulers": [80],
+    "editor.stickyScroll.enabled": false,
+    "editor.wordWrap": "on",
+    "emmet.includeLanguages": {
+        "vue-html": "html"
+    },
+    "files.autoSave": "off",
+    "git.openRepositoryInParentFolders": "never",
+    "liveServer.settings.CustomBrowser": "firefox",
+    "liveServer.settings.donotShowInfoMsg": true,
+    "liveServer.settings.donotVerifyTags": true,
+    "prettier.tabWidth": 4,
+    "terminal.integrated.fontFamily": "monospace",
+    "terminal.integrated.fontSize": 13,
+    "vim.handleKeys": {
+        "/": true,
+        "<C-d>": true,
+        "<C-r>": true,
+        "<C-s>": true,
+        "<C-z>": true,
+        "<Shift-Up>": true
+    },
+    "vim.leader": "'",
+    "vim.neovimUseConfigFile": true,
+    "vim.smartRelativeLine": true,
+    "vim.statusBarColorControl": false,
+    "vim.useCtrlKeys": true,
+    "vim.useSystemClipboard": true,
+    "vim.vimrc.enable": true,
+    "vim.vimrc.path": "$HOME/.vimrc",
+    "window.newWindowProfile": "Default",
+    "workbench.colorCustomizations": {
+        "[Material Theme Palenight]": {
+            "activityBar.activeBorder": "#7CB342",
+            "activityBarBadge.background": "#7CB342",
+            "breadcrumb.activeSelectionForeground": "#7CB342",
+            "editor.findMatchBorder": "#7CB342",
+            "editorSuggestWidget.highlightForeground": "#7CB342",
+            "editorWidget.border": "#7CB342",
+            "editorWidget.resizeBorder": "#7CB342",
+            "list.activeSelectionForeground": "#7CB342",
+            "list.highlightForeground": "#7CB342",
+            "list.inactiveSelectionForeground": "#7CB342",
+            "menu.selectionForeground": "#7CB342",
+            "menubar.selectionForeground": "#7CB342",
+            "notificationLink.foreground": "#7CB342",
+            "panelTitle.activeBorder": "#7CB342",
+            "pickerGroup.foreground": "#7CB342",
+            "progressBar.background": "#7CB342",
+            "scrollbarSlider.activeBackground": "#7CB34250",
+            "selection.background": "#7CB34240",
+            "settings.headerForeground": "#7CB342",
+            "settings.modifiedItemIndicator": "#7CB342",
+            "statusBarItem.remoteBackground": "#7CB342",
+            "tab.activeBorder": "#7CB342",
+            "textLink.foreground": "#7CB342"
+        },
+        "statusBar.background": "#181818",
+        "statusBar.debuggingBackground": "#181818",
+        "statusBar.foreground": "#8beeff",
+        "statusBar.noFolderBackground": "#181818"
+    },
+    "workbench.colorTheme": "Everforest Dark",
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.settings.editor": "json"
+}
