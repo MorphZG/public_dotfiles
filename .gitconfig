@@ -1,0 +1,13 @@
+# ~/.gitconfig
+
+# git config --global -e
+[user]
+email = zoran1607@gmail.com
+name = MorphZG
+[init]
+defaultBranch = main
+[pull]
+rebase = false
+[core]
+editor = nvim
+autocrlf = input

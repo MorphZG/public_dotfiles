@@ -1,5 +1,5 @@
 #! /bin/bash
-# setup script
+# OS setup script
 
 # install git
 sudo apt install git

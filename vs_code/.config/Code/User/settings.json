@@ -141,5 +141,13 @@
     },
     "workbench.colorTheme": "Everforest Dark",
     "workbench.iconTheme": "material-icon-theme",
-    "workbench.settings.editor": "json"
+    "workbench.settings.editor": "json",
+    "github.copilot.enable": {
+        "*": false,
+        "plaintext": false,
+        "markdown": false,
+        "scminput": false,
+        "javascript": false
+    },
+    "github.copilot.nextEditSuggestions.enabled": false
 }
