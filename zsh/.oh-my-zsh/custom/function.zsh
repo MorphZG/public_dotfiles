@@ -2,7 +2,7 @@
 # Custom function definitions
 # ========================================
 # Using custom Bash functions can significantly speed up your workflow by automating repetitive tasks.
- 
+
 # --- Navigation shortcuts ---
 # 
 # use fzf to select directory inside $HOME/coding/ and cd into it
@@ -14,14 +14,14 @@ coding() { # Search coding directory
 
 # cd into one of public projects, input first argument
 # usage: type "cproj project_name"
-proj() { # Search public_projects directory
+project() { # Search public_projects directory
   local dir
   dir=$(find "$HOME/coding/public_projects" -mindepth 1 -maxdepth 1 -type d | fzf) && cd "$dir"
 }
 
 doc() { # Search Documents directory
   local dir
-  dir=$(find "$HOME/Documents" -mindepth 1 -maxdepth 1 -type d | fzf) && cd "$dir"
+  dir=$(find "$HOME/Documents" -mindepth 1 -maxdepth 1 -type d | fzf --header="select a directory inside ~/Documents") && cd "$dir"
 }
 
 # reload shell configuration by sourcing .zshrc

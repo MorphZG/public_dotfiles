@@ -11,8 +11,6 @@ alias md="frogmouth"
 alias lgit="lazygit"
 
 # navigation
-alias project="proj"
-alias docs="docs"
 alias astro="cd $HOME/coding/public_projects/morphzg.github.io/astro_project"
 alias notes="cd $HOME/Documents/obsidian_vault/"
 

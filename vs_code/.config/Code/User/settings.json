@@ -43,25 +43,7 @@
         "editor.rulers": [80],
         "editor.wordBasedSuggestions": "off"
     },
-    //-------- Code Spell Checker Configuration --------
-    // Specify file types to spell check.
-    "cSpell.enabledFileTypes": {
-        "javascript": true,
-        "javascriptreact": true,
-        "markdown": true,
-        "plaintext": true,
-        "sql": true,
-        "typescript": true,
-        "typescriptreact": true,
-        "yaml": true
-    },
-    "cSpell.ignorePaths": [
-        "node_modules",
-        "**/node_modules",
-        "**/node_modules/**",
-        ".git"
-    ],
-    "cSpell.userWords": ["webdev"],
+    "containers.containerClient": "com.microsoft.visualstudio.containers.docker",
     "editor.acceptSuggestionOnEnter": "off",
     "editor.detectIndentation": true,
     "editor.fontFamily": "JetBrainsMono Nerd Font Mono",
@@ -85,10 +67,19 @@
     },
     "files.autoSave": "off",
     "git.openRepositoryInParentFolders": "never",
+    "github.copilot.enable": {
+        "*": false,
+        "javascript": false,
+        "markdown": false,
+        "plaintext": false,
+        "scminput": false
+    },
+    "github.copilot.nextEditSuggestions.enabled": false,
     "liveServer.settings.CustomBrowser": "firefox",
     "liveServer.settings.donotShowInfoMsg": true,
     "liveServer.settings.donotVerifyTags": true,
     "prettier.tabWidth": 4,
+    "reactSnippets.settings.prettierEnabled": true,
     "terminal.integrated.fontFamily": "monospace",
     "terminal.integrated.fontSize": 13,
     "vim.handleKeys": {
@@ -100,10 +91,10 @@
         "<Shift-Up>": true
     },
     "vim.leader": "'",
-    "vim.neovimUseConfigFile": true,
+    "vim.neovimUseConfigFile": false,
     "vim.smartRelativeLine": true,
     "vim.statusBarColorControl": false,
-    "vim.useCtrlKeys": true,
+    "vim.useCtrlKeys": false,
     "vim.useSystemClipboard": true,
     "vim.vimrc.enable": true,
     "vim.vimrc.path": "$HOME/.vimrc",
@@ -141,13 +132,5 @@
     },
     "workbench.colorTheme": "Everforest Dark",
     "workbench.iconTheme": "material-icon-theme",
-    "workbench.settings.editor": "json",
-    "github.copilot.enable": {
-        "*": false,
-        "plaintext": false,
-        "markdown": false,
-        "scminput": false,
-        "javascript": false
-    },
-    "github.copilot.nextEditSuggestions.enabled": false
+    "workbench.settings.editor": "json"
 }

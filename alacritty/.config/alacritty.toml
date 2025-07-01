@@ -1,7 +1,7 @@
 # https://alacritty.org/config-alacritty.html
 
 [window]
-dimensions = { columns = 130, lines = 30 }
+dimensions = { columns = 130, lines = 20 }
 position = { x = 1630, y = 1050 }
 
 [[colors.indexed_colors]]
